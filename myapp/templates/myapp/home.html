@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Django app</title>
+</head>
+<body>
+    <h1>This is my Django project</h1>
+    {% if result %}
+        <h1>This is my classification result: {{ result }}</h1>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="sepal_length">Sepal Length:</label>
+        <input type="number" id="sepal_length" name="sepal_length" required><br>
+
+        <label for="sepal_width">Sepal Width:</label>
+        <input type="number" id="sepal_width" name="sepal_width" required><br>
+
+        <label for="petal_length">Petal Length:</label>
+        <input type="number" id="petal_length" name="petal_length" required><br>
+
+        <label for="petal_width">Petal Width:</label>
+        <input type="number" id="petal_width" name="petal_width" required><br>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
